@@ -1,116 +1,184 @@
-  @import url('https://fonts.googleapis.com/css2?family=Castoro&family=Castoro+Titling&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@500&family=Press+Start+2P&display=swap');
+
+/* Structural settings */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    font-family: 'Overpass Mono', monospace;
+    display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
 
 
-  html {
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
-      height: 100%;
-      overflow-x: hidden;
-  }
+.top-text {
+    font-size: 3vw;
+    letter-spacing: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 40px 0 30px;
+}
 
-  * {
-      margin: 0;
-      padding: 0;
-      border: none;
+/* Start Interface */
 
-  }
-  body {
-      font-family: 'Castoro', serif;
-      font-weight: 3;
-      color: rgb(0, 0, 0);
-      background-color: rgb(238, 231, 223);
-  }
+.start-area {
+    background-color: #ffffff;
+    height: 500px;
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 3px double #1E1E1E;
+    box-shadow: 0 0 5px #1E1E1E;
+    margin-bottom: 100px;
+}
 
-  p {
-      display: block;
-      margin-block-start: 1em;
-      margin-block-end: 1em;
-      margin-inline-start: 0px;
-      margin-inline-end: 0px;
-  }
-
-  /*headings and logo*/
-
-  h1 {
-      font-family: 'Castoro Titling', cursive;
-      font-style: italic;
-      text-transform: uppercase;
-      letter-spacing: 10px;
-      color: rgb(0, 0, 0);
-      letter-spacing: 1px;
-  }
-
-  header {
-      height: 60px;
-      width: 100%;
-      position: fixed;
-      color: rgb(0, 0, 0);
-      background-color: rgba(255, 255, 255, 0.4);
-
-  }
-
-  .top-header{
-            font-family: 'Castoro', serif;
-            font-size: 90%;
-            text-align: center;
-            background-color: #ffffff;
-            padding: 25px;
-            border-bottom: 5px solid #1E1E1E;
-            box-shadow: 0 0 5px #1E1E1E;
-        }
-
-  .top-text {
-                    font-size:90% ;
-                    letter-spacing: 18px;
-                    text-transform: uppercase;
-                    text-align: center;
-                    margin: 30px 0 30px;
-                }
+.section-header {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 80px;
+}
 
 
-  .start-area {
-      background-color: #ffffff;
-      height: 560px;
-      max-width: 1000px;
-      margin: 0 auto;
-      border: 3px double #1E1E1E;
-      box-shadow: 0 0 5px #1E1E1E;
-      margin-bottom: 100px;
-  }
+.section-text {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 0 60px 0;
+}
 
-  .section-text {
-      font-size:90%;
-      letter-spacing: 1px;
-      text-align: center;
-      padding: 0 40px 0;
-  }
-
-  .section-text p {
-      padding-top: 250px;
-  }
+.section-text p {
+    padding-top: 50px;
+}
 
 
-  .submit-btn {
-      padding-top: 20px;
-      text-align: center;
-  }
 
-  .submit-btn button {
-      font-family: 'Castoro', serif;
-      text-transform: lowercase;
-      font-size: 1rem;
-      width: 110px;
-      height: 50px;
-      background-color: #ffffff;
-      color: #1E1E1E;
-      border-radius: 30px;
-      border: 2px solid #1E1E1E;
-      box-shadow: 0 0 2px #1E1E1E;
-  }
 
-  .submit-btn button:hover {
-      background-color: #F9DD3C;
-      cursor: pointer;
-  }
+.play-btn {
+    padding-top: 20px;
+    text-align:center;
+}
+
+.play-btn button {
+    font-family: 'Overpass Mono', monospace;
+    text-transform: lowercase;
+    font-size: 1rem;
+    width: 110px;
+    height: 50px;
+    background-color: #ffffff;
+    color: #1E1E1E;
+    border-radius: 30px;
+    border: 2px solid #1E1E1E;
+    box-shadow: 0 0 2px #1E1E1E;
+}
+
+
+/* play Button Hover Effect */
+.play-btn button:hover {
+    background-color: #F9DD3C;
+    cursor: pointer;
+}
+
+/*game area*/
+.questions-area {
+    background-color: #ffffff;
+    height: 560px;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.buttons-container {
+    display: flex;
+    margin-top: 15px;
+}
+
+.buttons-container button {
+    font-family: 'Overpass Mono', monospace;
+    font-size: 1.2rem;
+    background-color: #ffffff;
+    color: #1E1E1E;
+    border-radius: 25px;
+    width: 52%;
+    height: 80px;
+    margin: 20px 5px 0 20px;
+    border: 2px solid #1E1E1E;
+    box-shadow: 0 0 2px #1E1E1E;
+}
+
+.section-question {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 50px;
+}
+
+.section-counter {
+    width: 70px;
+    height: 70px;
+    border-radius: 15px;
+    background-color: #1E1E1E;
+    color: #ffffff;
+    position: absolute;
+    text-align: center;
+    margin: 10px;
+}
+
+.section-timer {
+    width: 70px;
+    height: 70px;
+      font-weight: 900;
+      font-size: 1.3vw;
+    border-radius: 15px;
+    background-color: #1E1E1E;
+    color: #ffffff;
+    float: right;
+    text-align: center;
+    margin: 10px;
+}
+
+nav a {
+    margin: 16px 12px;
+    font-weight: 900;
+    font-size: 1.3vw;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 15px;
+}
+
+.section-counter h3:first-child {
+    margin-top: 14px;
+}
+
+
+
+/* Question Button Hover Effect */
+
+.hover:hover {
+    background-color: #F9DD3C;
+    cursor: pointer;
+}
+
+.questions-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.questions-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
