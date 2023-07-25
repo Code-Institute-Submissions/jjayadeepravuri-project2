@@ -11,11 +11,11 @@
 body {
     font-family: 'Overpass Mono', monospace;
     display: flex;
-  width: 100vw;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffffff;
+    width: 100vw;
+    height: 500vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
 }
 
 
@@ -59,11 +59,17 @@ body {
 }
 
 
+.container {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 0 60px 0;
+}
 
 
 .play-btn {
     padding-top: 20px;
-    text-align:center;
+    text-align: center;
 }
 
 .play-btn button {
@@ -87,17 +93,63 @@ body {
 }
 
 /*game area*/
-.questions-area {
+.top-bar {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 90%;
+    text-align: center;
     background-color: #ffffff;
-    height: 560px;
+    padding: 25px;
+    border-bottom: 5px solid #1E1E1E;
+    box-shadow: 0 0 5px #1E1E1E;
+}
+#top-game-section{
+    height:620px;
+    font-size:30px;
+    max-width:fit-content;
+    justify-content: center;
+        align-items: center;
+}
+
+.top-game-text{
+    font-size: 10px;
+        letter-spacing: 18px;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 40px 0 30px;
+        position:relative;
+        right:50px;
+}
+.container {
+
+    height: 100px;
     max-width: 1000px;
     margin: 0 auto;
     margin-bottom: 100px;
 }
+#question{
+    font-size: 50px;
+}
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 26px;
+    margin: 28px 41px;
+}
 
-.buttons-container {
-    display: flex;
-    margin-top: 15px;
+.btn:hover {
+    color: rgb(241, 238, 25);
+}
+
+.btn {
+
+    padding: 15px 50px;
+    background-color: #ffffff;
+    color: #1E1E1E;
+    border-radius: 30px;
+    border: 2px solid #1E1E1E;
+
+
+
 }
 
 .buttons-container button {
@@ -113,7 +165,7 @@ body {
     box-shadow: 0 0 2px #1E1E1E;
 }
 
-.section-question {
+.question-section {
     font-size: 1.5rem;
     letter-spacing: 2px;
     padding-top: 100px;
@@ -123,7 +175,7 @@ body {
     left: 50px;
 }
 
-.section-counter {
+.score-counter {
     width: 70px;
     height: 70px;
     border-radius: 15px;
@@ -134,11 +186,11 @@ body {
     margin: 10px;
 }
 
-.section-timer {
+.home-section {
     width: 70px;
     height: 70px;
-      font-weight: 900;
-      font-size: 1.3vw;
+    font-weight: 900;
+    font-size: 1.3vw;
     border-radius: 15px;
     background-color: #1E1E1E;
     color: #ffffff;
@@ -156,8 +208,8 @@ nav a {
     padding: 5px 15px;
 }
 
-.section-counter h3:first-child {
-    margin-top: 14px;
+.score-counter h3:first-child {
+    margin-top: 13px;
 }
 
 
@@ -169,16 +221,9 @@ nav a {
     cursor: pointer;
 }
 
-.questions-left {
-    width: 50%;
+.options {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-}
-
-.questions-right {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
 }
