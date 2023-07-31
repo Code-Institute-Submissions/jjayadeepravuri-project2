@@ -4,6 +4,10 @@ const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 const questionContainerElement = document.getElementById('question-container');
 const scores = document.getElementById('score');
+let shuffledQuestions, currentQuestionIndex;
+const totalQuestions = 10;
+const counterDisplay = document.getElementById("questionCounter");
+
 
 startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
@@ -12,21 +16,23 @@ nextButton.addEventListener('click', () => {
 });
 
 
-let shuffledQuestions, currentQuestionIndex;
-
+questionCounter++;
+counterDisplay.innerText = `${questionCounter}/${totalQuestions}`;
 function startGame() {
     startButton.classList.add('hide');
     shuffledQuestions = questions.sort(() => Math.random() - .5);
     questionContainerElement.classList.remove('hide');
     currentQuestionIndex = 0;
-
-    console.log('started');
-
+    questionCounter = 0;
     setNextquestion();
 }
 
 
 function setNextquestion() {
+
+
+    questionCounter++;
+    counterDisplay.innerText = `${questionCounter}/${totalQuestions}`;
     resetState();
     showQuestion(shuffledQuestions[currentQuestionIndex]);
 }
@@ -75,6 +81,7 @@ function setStatusClass(element, correct) {
         element.classList.add('correct');
     } else {
         element.classList.add('wrong');
+        
     }
 }
 
