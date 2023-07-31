@@ -164,6 +164,14 @@ body {
     color: rgb(241, 238, 25);
 }
 
+.btn.correct {
+  color: green;
+}
+
+.btn.wrong {
+  color: red;
+}
+
 .btn {
     padding: 4px 89px;
     background-color: #ffffff;
