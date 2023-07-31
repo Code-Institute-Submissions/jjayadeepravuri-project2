@@ -9,32 +9,37 @@
     <title>Swedish Quiz</title>
 </head>
 
-<body>
-<!---<div>
-      div class="section-counter">
-        <h3>Score</h3>
-        <h3 id="score">0</h3>
-        </div>
+<body id="game-area">
+    
 
-         <div class="section-timer">
+<header >
+<div id="top-game-section">
+    <div class="top-bar">
+        <h1><a href="index.html">Your Swedish Quiz</a></h1>
+    </div>   
+</div>
+</header>
+
+<section id="quiz-area">
+    <div id="quiz-area-top">
+        <div class="section-counter">
+        <h3>Score</h3>
+        <h3 id="score">0</h3></div>
+
+    <div class="section-timer">
         <h3>Timer</h3>
         <h3 id="timer">30</h3>
-         </div>
-           <div class="section-question">
-               <h2>Question &nbsp;</h2>
-               <h2 id="questionCounter">x/10</h2>
-             </div>
-</div> --->
-<header id >
-    <div id="top-game-section">
-    <div class="top-bar">
-        <h1><a href="index.html">&lt;codit&gt;</a></h1>
     </div>
-    <div class="top-game-text">
-        <h2>Your JavaScript quiz</h2>
-    </div>
-    </div>
-</header>
+    
+    </div> 
+
+
+<div class="section-question">
+    <h2>Question &nbsp;</h2>
+    <h2 id="questionCounter">x/10</h2>
+</div>
+
+
     <div class="container">
         <div id="question-container" class="hide">
             <div id="question">Question</div>
@@ -52,8 +57,9 @@
         </div>
     </div>
 
-    <script src="assets/js/script.j"></script>
+    <script src="assets/js/script.js"></script>
     <script src="https://kit.fontawesome.com/6131d31248.js" crossorigin="anonymous"></script>
+    </section>
 </body>
 
 </html>
