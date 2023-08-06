@@ -1,6 +1,6 @@
 # SWEDISH QUIZ
 
-Swedish Quiz isfun interative quiz game. Users will be able to see feedback right away on which questions they got right or wrong.
+Swedish Quiz is fun interative quiz game. Users will be able to see feedback right away on which questions they got right or wrong.
 
 Visit the deployed website [here](https://jayadeepravuri.github.io/project-one/)
 
@@ -19,27 +19,23 @@ Visit the deployed website [here](https://jayadeepravuri.github.io/project-one/)
 ### Users stories
 
 * As a user, I want to be able to know what the website's purpose is at the first glance
-* As a user , I would like my needs to be relatable to the needs that website has provided
-* As a user, i would like to know how the service provider of the website can address my needs
-* As a user, i want to be able to contact the service provider and show intrest for their service
+* As a user, I want to be able to easily enter the game page.
+* As a user, I want to be able to play the game and test my knowledge in a fun and ultra-simple way.
+* As a user, I want to be able to see if my answer is correct.
+* As a user, I want to see what was the correct answer if I have chosen an incorrect answer.
+* As a user, I want to know how many questions I have left to complete the quiz.
+* As a user, I want to be able to play the game again.
 
 ### Typography
 
 * 'castoro' is the font used for the body of the site with serif used as a fallback.
-* 'castoro Titling' is the font used for the logo, header sections and footer sections
 
 ### Imagery
 
-The images utilized in the website, are choosen in a way that gives a calming feeling to the potential user profile. 
+No Images were used 
 
-* The main opening image consists of a women who is peacefully expressing her feelings through her art in a calm nature setting
-* The image in the first section of the home page shows the contrast from the main picture by conveying disturbance 
-* The image in the second section of the home page is a picture of a smiling saviour(charlotte mae), who provides service to the user profile of the site
-* The image in the third section of the home page visually represents to book a discovery call
-* The image in the about section is again a picture of the service provider(charlotte mae) so the user gets to familarize with her
-
-### Holistic feel
-The crucial objective of the website is to make its service attractive to the user profile by addressing relatable needs of the service and show it in a more elegant way by providing only required information in a very soothing and peaceful way through selective colors and pictures.
+### Structure of the site
+When entering the site, users will be on the home page which is the Landing page. There is a 'Let's Play' button that users can click to enter the Get Set Go button, to get on the mood before playing the game. Once on the game page, users will be faced with the first question from the quiz. Every time they click on an answer, the next question will load. Once 10 questions have been answered, the restart button will appear to play the game again or they can go home by clicking on the logo, which will redirect them to the home page.
 
 
 
@@ -60,17 +56,16 @@ The crucial objective of the website is to make its service attractive to the us
 
 * [HTML5](https://en.wikipedia.org/wiki/HTML5)
 * [CSS3](https://en.wikipedia.org/wiki/CSS)
+* [JavaScript](https://en.wikipedia.org/wiki/Javascript)
 
 ### Libraries and Programs Used
 
 * [Google Fonts](https://fonts.google.com/)
-    - Google Fonts was used to import the fonts Castoro Titling and castor to the style.css file.
+    - Google Fonts was used to import the fonts Serif and castor to the style.css file.
 
-* [Font Awesome](https://fontawesome.com/)
-     - Font Awesome was used in the footer section throughout all pages to add icons
 
-* [Pexels](https://www.pexels.com/es-es/)
-    - Pexels was used for all the images of the site.
+
+
 
 * [GitHub](https://github.com/)
      - GitHub was used to store the project after pushing.
@@ -89,6 +84,8 @@ The crucial objective of the website is to make its service attractive to the us
 
 * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
     - W3C CSS Validator was used to validate the CSS code.
+*[Js hint](https://jshint.com/)
+    - Js hint was used to validate the JavaScript code.
 * [Coolors](https://coolors.co/)
     - Coolors website was used to create color pallete.
 
@@ -100,10 +97,11 @@ The crucial objective of the website is to make its service attractive to the us
 At the completion , I used the following websites to check my code for syntax errors:
 *  HTML - https://validator.w3.org/
 *  CSS - https://jigsaw.w3.org/css-validator/
+* JavaScript - https://jshint.com/
 
 ### Further Testing
 #### Personal Testing
- I was able to continuously test on the followinf screen sizes.
+ I was able to continuously test on the following screen sizes.
 * For larger screens-1444px
 * For large screens- 1250px to 1443px
 * For normal screens- 1249px to 1025px
@@ -148,8 +146,7 @@ At the completion , I used the following websites to check my code for syntax er
 
 * All the content was written by Jayadeep Ravuri.
 
-### Media
-* All the images included in the site, were downloaded from the free picture website, Pexels
+
 
 ### Code
 
@@ -159,5 +156,4 @@ At the completion , I used the following websites to check my code for syntax er
 ## Acknowledgements
 
 * Code Institute and their tutor assistance along with the community in slack for 
-all the support in this project
-* Antonio, my mentor for his guidance and his time.
+all the support in this project.
