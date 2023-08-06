@@ -9,60 +9,41 @@
     <title>Swedish Quiz</title>
 </head>
 
-<body>
-    <section class="questions-area hide" i="questions-area">
-
-
-        <div class="game-area">
-
-            <div class="section-timer">
-                <nav>
-                    <a href="index.html"><i class="fa-solid fa-house"></i></a>
-                </nav>
-            </div>
-
-            <div class="section-counter">
-                <h3>Score</h3>
-                <h3 id="score">0</h3>
-            </div>
-
-
-            <div class="section-question" <h2>Question &nbsp; </h2>
-                <h2 id="questionCounter">x/10</h2>
-            </div>
-
-            iv class="section-text">
-            <div id="question> <p class= " question-text ">
-
-                                    </p>
-                </div>
-            </div>
-
-            <div id=" answer-buttons" class="buttons-container">
-                <div class="questions-left">
-                    <button aria-label="Answer A" data-number="1" id="answer-btn-1">Answer 1</button>
-                    <button aria-label="Answer B" data-number="2" id="answer-btn-2">Answer 2</button>
-                </div>
-                <div class="questions-right">
-                    <button aria-label="Answer C" data-number="3" id="answer-btn-3">Answer 3</button>
-                    <button aria-label="Answer D" data-number="4" id="answer-btn-4">Answer 4</button>
-                </div>
-            </div>
-            <!--restart and next buttons-->
-            <div>
-                <button id="next" class="hidden">Next <i class="fa-solid fa-arrow-right"></i></button>
-                <div id="restart-info" class="hidden">
-                    <p>That concludes the quiz. You can see your final score in the counters below.<br>
-                        Would you like to play again?</p>
-                </div>
-                <button id="restart" class="hidden">Restart <i class="fa-solid fa-rotate-right"></i></button>
+<body id="game-area">
+    <header>
+        <div id="top-game-section">
+            <div class="top-bar">
+                <h1><a href="index.html" id="toptext">Your Swedish Quiz</a></h1>
             </div>
         </div>
+    </header>
+    
+    <section id="quiz-area">
+        <div class="container">
+            <div id="question-container" class="hide">
+                <div class="section-question ">
+                    <h2>Question</h2>
+                    <h2 id="questionCounter"> x/10</h2>
+                </div>
+                <div id="question">Question</div>
+
+                <div id="answer-buttons" class="btn-grid">
+                    <button class="btn">Answer 1</button>
+                    <button class="btn">Answer 2</button>
+                    <button class="btn">Answer 3</button>
+                    <button class="btn">Answer 4</button>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="start-btn" class="start-btn btn">Get Set Go</button>
+                <button id="next-btn" class="next-btn btn hide">Next</button>
+            </div>
+        </div>
+
+        <script src="assets/js/script.js"></script>
+        <script src="https://kit.fontawesome.com/6131d31248.js" crossorigin="anonymous"></script>
     </section>
 
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/questions.js"></script>
-    <script src="https://kit.fontawesome.com/6131d31248.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

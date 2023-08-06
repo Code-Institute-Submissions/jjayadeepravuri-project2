@@ -1,13 +1,14 @@
+//
+const openPhase = document.getElementById('start-area')
 const startButton = document.getElementById('start-btn');
 const nextButton = document.getElementById('next-btn');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 const questionContainerElement = document.getElementById('question-container');
-const scores = document.getElementById('score');
+const topBar = document.getElementById('top-game-section');
 let shuffledQuestions, currentQuestionIndex;
 const totalQuestions = 10;
 const counterDisplay = document.getElementById("questionCounter");
-
 
 startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
@@ -15,12 +16,10 @@ nextButton.addEventListener('click', () => {
     setNextquestion();
 });
 
-
-questionCounter++;
-counterDisplay.innerText = `${questionCounter}/${totalQuestions}`;
 function startGame() {
     startButton.classList.add('hide');
     shuffledQuestions = questions.sort(() => Math.random() - .5);
+    topBar.classList.remove('hide');
     questionContainerElement.classList.remove('hide');
     currentQuestionIndex = 0;
     questionCounter = 0;
@@ -29,8 +28,6 @@ function startGame() {
 
 
 function setNextquestion() {
-
-
     questionCounter++;
     counterDisplay.innerText = `${questionCounter}/${totalQuestions}`;
     resetState();
@@ -38,6 +35,7 @@ function setNextquestion() {
 }
 
 function showQuestion(question) {
+    
     questionElement.innerText = question.question;
     question.answers.forEach(answer => {
         const button = document.createElement('button');
@@ -72,6 +70,7 @@ function selectAnswer(e) {
     } else {
         startButton.innerText = 'Restart';
         startButton.classList.remove('hide');
+        endGameText.classList.remove('hide');
     }
 }
 
@@ -81,7 +80,7 @@ function setStatusClass(element, correct) {
         element.classList.add('correct');
     } else {
         element.classList.add('wrong');
-        
+
     }
 }
 
@@ -89,8 +88,6 @@ function clearStatusClass(element) {
     element.classList.remove('correct');
     element.classList.remove('wrong');
 }
-
-
 
 const questions = [
     {

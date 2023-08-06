@@ -1,257 +1,344 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@500&family=Press+Start+2P&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Castoro&family=Castoro+Titling&display=swap');
 
-/* Structural settings */
 
-* {
-    margin: 0px;
-    padding: 0;
-    border: none;
+  * {
+      margin: 0px;
+      padding: 0;
+      border: none;
+  }
+
+  body {
+      font-family: 'Castoro', serif;
+      display: flex;
+      width: 100vw;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      background-color: #006AA7;
+  }
+
+
+  .top-text {
+      font-size: 35px;
+      letter-spacing: 18px;
+      text-transform: uppercase;
+      text-align: center;
+      margin: 40px 40px 30px;
+  }
+
+  /* Start Interface */
+
+  .start-area {
+      background-color: #FFCD00;
+      height: 500px;
+      max-width: 1000px;
+      margin: 0 auto;
+      border: 3px #1E1E1E;
+      box-shadow: 0 0 20px #1E1E1E;
+      margin-bottom: 100px;
+  }
+
+  .section-header {
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      text-align: center;
+      margin-top: 120px;
+  }
+
+
+  .section-text {
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+      text-align: center;
+      padding: 8px 60px 36px;
+  }
+
+  .section-text p {
+      padding-top: 50px;
+  }
+
+  .play-btn {
+      padding-top: 20px;
+      text-align: center;
+  }
+
+  a {
+      text-decoration: none;
+      width: 110px;
+      height: 50px;
+      color: #1E1E1E;
+      border-radius: 30px;
+      border: 2px solid #1E1E1E;
+      box-shadow: 0 0 2px #1E1E1E;
+      padding: 21px;
+
+  }
+
+  .play-btn button:hover {
+      background-color: #F9DD3C;
+      cursor: pointer;
+      color: #006AA7;
+  }
+
+/*game-interface*/
+
+  #game-area {
+      font-family: 'Castoro', serif;
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+      height: 85vh;
+      align-items: center;
+      background-color: #006AA7;
+      justify-content: space-around;
+      align-content: space-between;
+  }
+
+  #top-game-section {
+      max-height: 500px;
+  }
+
+  #quiz-area {
+      flex-direction: column;
+      margin: 45px;
+      max-height: 560px;
+  }
+
+  .top-bar {
+      font-size: 150%;
+      text-align: center;
+      background-color: #F9DD3C;
+      box-shadow: 0 0 5px #1E1E1E;
+  }
+
+  #toptext {
+      padding: 51px;
+  }
+
+  .container {
+
+      height: 214px;
+      max-width: 1000px;
+      margin-bottom: 90px;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+      text-align: center;
+      padding: 0 60px 0;
+  }
+
+
+  #question {
+      font-size: 40px;
+  }
+
+  .section-question {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      top: -40px;
+  }
+
+  .btn-grid {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      gap: 26px;
+      margin: 25px 208px;
+  }
+
+  .btn:hover {
+      color: #006AA7;
+  }
+
+  .btn.correct {
+      background-color: green;
+  }
+
+  .btn.wrong {
+      color: red;
+  }
+
+  .btn {
+      font-size: 27px;
+      font-family: 'Castoro', serif;
+      padding: 4px 89px;
+      background-color: #FFCD00;
+      color: #1E1E1E;
+      border-radius: 14px;
+      border: 2px solid #1E1E1E;
+  }
+
+  .hide {
+      display: none;
+  }
+
+  /*Media Queries*/
+  @media screen and (min-width:1444px) {
+
+    #quiz-area{
+        top:-56px;
+        position:relative;
+    }
+
+    .top-bar{
+        font-size: 100%;
+    }
+
+    .top-text{
+        margin:45px 19px 30px;
+    }
+
+    #game-area{
+        height:116vh;
+    }
+
+    #question{
+        font-size:27px;
+    }
+
+    .btn{
+        font-size:15px;
+    }
+  }
+
+@media screen and (min-width: 1250px) and (max-width: 1443px) {
+
+    #quiz-area {
+            top: -56px;
+            position: relative;
+        }
+    
+        .top-bar {
+            font-size: 100%;
+        }
+    
+        .top-text {
+            margin: 45px 19px 30px;
+        }
+    
+        #game-area {
+            height: 116vh;
+        }
+    
+        #question {
+            font-size: 27px;
+        }
+    
+        .btn {
+            font-size: 24px;
+        }
+
 }
 
-body {
-    font-family: 'Overpass Mono', monospace;
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
+@media screen and (min-width: 992px) and (max-width: 1249px) {
+
+
+.top-bar{
+    font-size: 81%;
+    top:50px;
+    position:relative;
+    }
+#quiz-area {
+        top: 156px;
+        position: relative;
+    }
+
+.container{
+    height:211px;
+    font-size:18px;
 }
+
+ #question {
+     font-size: 25px;
+ }
+
+ .btn {
+     font-size: 19px;
+ }
+
+
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+.top-text{
+    font-size:18px;   
+    letter-spacing: 10px;
+}
+
+.section-header{
+    font-size:21px;
+}
+
+.section-text{
+    font-size:20px;
+}
+
+#game-area{
+    height:130vh;
+}
+
+.container{
+    height:372px;
+    font-size:21px;
+    max-width:724px;
+}
+#question{
+    font-size:18px;
+    text-align:center;
+}
+
+.btn{
+    font-size:18px;
+    padding: 0px 73px;
+}
+
+.btn-grid{
+     margin: 33px 25px;
+}
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
 
 
 .top-text {
-    font-size: 35px;
-    letter-spacing: 18px;
-    text-transform: uppercase;
-    text-align: center;
-    margin: 40px 0 30px;
-}
+        font-size: 18px;
+        letter-spacing: 10px;
+            margin: 44px 9px 38px;
+    }
 
-/* Start Interface */
+    .section-header {
+        font-size: 12px;
+    }
 
-.start-area {
-    background-color: #ffffff;
-    height: 500px;
-    max-width: 1000px;
-    margin: 0 auto;
-    border: 3px double #1E1E1E;
-    box-shadow: 0 0 5px #1E1E1E;
-    margin-bottom: 100px;
-}
+    .section-text {
+        font-size:15px;
+    }
 
-.section-header {
-    font-size: 1.5rem;
-    letter-spacing: 2px;
-    text-align: center;
-    margin-top: 80px;
-}
+    #game-area {
+        height: 170vh;
+    }
 
+    .top-bar{
+        font-size:88%;
+    }
+    .container {
+        height: 460px;
+        font-size: 21px;
+        max-width: 724px;
+    }
 
-.section-text {
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-    text-align: center;
-    padding: 0 60px 0;
-}
+    #question {
+        font-size: 18px;
+        text-align: center;
+    }
 
-.section-text p {
-    padding-top: 50px;
-}
+    .btn {
+        font-size: 18px;
+        padding: 0px 73px;
+    }
 
-
-.container {
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-    text-align: center;
-    padding: 0 60px 0;
-}
-
-
-.play-btn {
-    padding-top: 20px;
-    text-align: center;
-}
-
-.play-btn button {
-    font-family: 'Overpass Mono', monospace;
-    text-transform: lowercase;
-    font-size: 1rem;
-    width: 110px;
-    height: 50px;
-    background-color: #ffffff;
-    color: #1E1E1E;
-    border-radius: 30px;
-    border: 2px solid #1E1E1E;
-    box-shadow: 0 0 2px #1E1E1E;
-}
-
-
-/* play Button Hover Effect */
-.play-btn button:hover {
-    background-color: #F9DD3C;
-    cursor: pointer;
-}
-
-/*game area*/
-#game-area{
-        font-family: 'Overpass Mono', monospace;
-            display: flex;
-            flex-direction: column;
-            width: 100vw;
-            height: 100vh;
-            align-items: center;
-            background-color: #ffffff;
-            justify-content: space-around;
-            align-content: space-between;
-}
-#quiz-area {
-    flex-direction: column;
-    margin: 33px;
-    max-height: 560px;
-}
-
-#top-game-section {
-    max-height: 500px;
-}
-
-.top-bar {
-    font-size: 150%;
-    text-align: center;
-    background-color: #ffffff;
-    padding: 5px;
-    box-shadow: 0 0 5px #1E1E1E;
-}
-
-
-.top-game-text {
-    font-size: 10px;
-    letter-spacing: 18px;
-    text-transform: uppercase;
-    text-align: center;
-    margin: 40px 0 30px;
-    position: relative;
-    right: 50px;
-    text-decoration: underline;
-}
-
-
-#quiz-area-top {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.container {
-
-    height: 100px;
-    max-width: 1000px;
-    margin: 0 auto;
-    margin-bottom: 100px;
-}
-
-#question {
-    font-size: 40px;
-}
-
-.btn-grid {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 26px;
-    margin: 25px 208px;
-}
-
-.btn:hover {
-    color: rgb(241, 238, 25);
-}
-
-.btn.correct {
-  color: green;
-}
-
-.btn.wrong {
-  color: red;
-}
-
-.btn {
-    padding: 4px 89px;
-    background-color: #ffffff;
-    color: #1E1E1E;
-    border-radius: 14px;
-    border: 2px solid #1E1E1E;
-}
-
-.buttons-container button {
-    font-family: 'Overpass Mono', monospace;
-    font-size: 1.2rem;
-    background-color: #ffffff;
-    color: #1E1E1E;
-    border-radius: 25px;
-    width: 52%;
-    height: 80px;
-    margin: 20px 5px 0 20px;
-    border: 2px solid #1E1E1E;
-    box-shadow: 0 0 2px #1E1E1E;
-}
-
-.section-question {
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-
-.score-counter {
-    width: 70px;
-    height: 70px;
-    border-radius: 15px;
-    background-color: #1E1E1E;
-    color: #ffffff;
-    position: absolute;
-    text-align: center;
-    margin: 10px;
-}
-
-.home-section {
-    width: 70px;
-    height: 70px;
-    font-weight: 900;
-    font-size: 1.3vw;
-    border-radius: 15px;
-    background-color: #1E1E1E;
-    color: #ffffff;
-    float: right;
-    text-align: center;
-    margin: 10px;
-}
-
-nav a {
-    margin: 16px 12px;
-    font-weight: 900;
-    font-size: 1.3vw;
-    text-decoration: none;
-    color: #fff;
-    padding: 5px 15px;
-}
-
-.score-counter h3:first-child {
-    margin-top: 13px;
-}
-
-
-
-/* Question Button Hover Effect */
-
-.hover:hover {
-    background-color: #F9DD3C;
-    cursor: pointer;
-}
-
-.options {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.hide {
-    display: none;
+    .btn-grid {
+        margin: 33px 25px;
+    }
 }
