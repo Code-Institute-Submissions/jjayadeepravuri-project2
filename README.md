@@ -42,13 +42,14 @@ When entering the site, users will be on the home page which is the Landing page
 ## Features
 
 * Made it Responsive design for all the pages and for all device sizes.
-* In the home page, It has a navigation menu in the header, a learn more button in the cover text, which leads to about section, the needs of the userprofile, about the service provider and a section that has a button to book for a call, which further leads to contact page.
-* In the about page, it provides further information of the service provider and their approach to the problem.
-* In the contact page, a sign up form is provided, to book for the service .
-* In the footer section, the logo of the website and facebook and google maps icons are provided.
+* In the home page, it gives information about the website and its purpose, with a button called "lets's play", which will be redirected to the get in the mood page.
+* In the get in the mood page, there is a "get set go" button, which will give the user to breathe some air and get in the mood before playing the game.
+* In the game page, the user gets to play the game by testing his knowledge by answering 10 multiple-choice questions.
+* After the user selects the answer the user gets immediate feedback by the options displaying red(incorrect answers) and green(correct answers) and a next-button so he can move to the next question.
+* After the user finishes the 10 questions, a restart button will appear to play the game again, or can press the logo at anytime during the game ,so he can go to the homepage.
 
 ## Future Features
-* The form can be made funtional.
+* Features like score can be added.
 
 ## Technologies Used
 
@@ -62,10 +63,6 @@ When entering the site, users will be on the home page which is the Landing page
 
 * [Google Fonts](https://fonts.google.com/)
     - Google Fonts was used to import the fonts Serif and castor to the style.css file.
-
-
-
-
 
 * [GitHub](https://github.com/)
      - GitHub was used to store the project after pushing.
@@ -84,8 +81,10 @@ When entering the site, users will be on the home page which is the Landing page
 
 * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
     - W3C CSS Validator was used to validate the CSS code.
+    - 
 *[Js hint](https://jshint.com/)
     - Js hint was used to validate the JavaScript code.
+
 * [Coolors](https://coolors.co/)
     - Coolors website was used to create color pallete.
 
@@ -95,9 +94,18 @@ When entering the site, users will be on the home page which is the Landing page
 ### Code Validation
 
 At the completion , I used the following websites to check my code for syntax errors:
-*  HTML - https://validator.w3.org/
+*  HTML - ht
+  - no errors found
 *  CSS - https://jigsaw.w3.org/css-validator/
+    no errors found
 * JavaScript - https://jshint.com/
+
+* [HTML]
+    - no errors found
+* [CSS]
+    - no errors found
+* [JavaScript]
+    - The Javascript files were validated through JSHint. There were multiple warnings for: ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz). After some research online, I saw that I need to add /*jshint esversion: 6 */ on the top of the JS file and the warning will disappear. I also had a few warnings for missing semi-colans which have also been rectified.
 
 ### Further Testing
 #### Personal Testing
@@ -117,9 +125,6 @@ At the completion , I used the following websites to check my code for syntax er
  ![lighthouse](https://github.com/jayadeepravuri/project2/blob/main/images/lighthouse.JPG)
 
  
-
-
-    
 ### Unfixed bugs
 
 * No unfixed bugs remaining in the website.
