@@ -115,8 +115,6 @@ At the completion , I used the following websites to check my code for syntax er
 
 * Lighthouse Devtool from Google Chrome was used for checking the performance of the website.
  ![lighthouse](https://github.com/jayadeepravuri/project2/blob/main/images/lighthouse.JPG)
-* Performance was low due high resolution images.
-* External libraries have lowered the performance
 
  
 
