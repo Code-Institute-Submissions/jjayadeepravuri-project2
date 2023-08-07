@@ -81,8 +81,8 @@ When entering the site, users will be on the home page which is the Landing page
 
 * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
     - W3C CSS Validator was used to validate the CSS code.
-    - 
-*[Js hint](https://jshint.com/)
+      
+* [Js hint](https://jshint.com/)
     - Js hint was used to validate the JavaScript code.
 
 * [Coolors](https://coolors.co/)
@@ -94,11 +94,6 @@ When entering the site, users will be on the home page which is the Landing page
 ### Code Validation
 
 At the completion , I used the following websites to check my code for syntax errors:
-*  HTML - ht
-  - no errors found
-*  CSS - https://jigsaw.w3.org/css-validator/
-    no errors found
-* JavaScript - https://jshint.com/
 
 * [HTML]
     - no errors found
