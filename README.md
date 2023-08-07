@@ -2,7 +2,7 @@
 
 Swedish Quiz is fun interative quiz game. Users will be able to see feedback right away on which questions they got right or wrong.
 
-Visit the deployed website [here](https://jayadeepravuri.github.io/project-one/)
+Visit the deployed website [here]( https://jayadeepravuri.github.io/project2/)
 
 ## Mockup
 ![mockup image](https://github.com/jayadeepravuri/project2/blob/main/images/mockup.JPG)
