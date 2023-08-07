@@ -98,6 +98,10 @@
       max-height: 500px;
   }
 
+  #top-game-section:hover{
+    text-decoration: solid;
+  }
+
   #quiz-area {
       flex-direction: column;
       margin: 45px;
@@ -188,7 +192,7 @@
     }
 
     #game-area{
-        height:116vh;
+        height:122vh;
     }
 
     #question{
@@ -275,9 +279,15 @@
 }
 
 #game-area{
-    height:130vh;
+    height:141vh;
 }
 
+.top-bar{
+    font-size: 73%;
+}
+#toptext{
+    padding:35px;
+}
 .container{
     height:372px;
     font-size:21px;
@@ -316,7 +326,7 @@
     }
 
     #game-area {
-        height: 170vh;
+        height: 148vh;
     }
 
     .top-bar{
@@ -324,10 +334,13 @@
     }
     .container {
         height: 460px;
-        font-size: 21px;
+        font-size: 17px;
         max-width: 724px;
+        padding: 0px 19px 0px;
     }
-
+#toptext{
+    padding:31px;
+}
     #question {
         font-size: 18px;
         text-align: center;
@@ -380,12 +393,13 @@
     }
 #question-container{
     width: 316px;
-    height:260px;
+    height:227px;
 }
     .container {
         height: 460px;
         font-size: 12px;
         max-width: 724px;
+        padding:6px 8px 0px;
     }
 
     #question {

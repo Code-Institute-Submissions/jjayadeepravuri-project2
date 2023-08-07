@@ -5,14 +5,14 @@ Swedish Quiz is fun interative quiz game. Users will be able to see feedback rig
 Visit the deployed website [here](https://jayadeepravuri.github.io/project-one/)
 
 ## Mockup
-![Charlotte Mae mockup image](https://github.com/jayadeepravuri/project-one/blob/bb546708c53764b02047459a74669904a38eaa4a/project%20one/assets/images/responsive%20-img.JPG)
+![Charlotte Mae mockup image](https://github.com/jayadeepravuri/project2/blob/main/images/mockup.JPG)
 
 ## User experience
 
 ### Color Reference
 
 
-![Colours used](https://github.com/jayadeepravuri/project-one/blob/a055bbf0c24b3bd72195e03581b898de188a232f/project%20one/assets/images/colorpallete.png)
+![Colours used](https://github.com/jayadeepravuri/project2/blob/a32d49a483f9d88e5860dcd08179890de8983bcf/images/sweden.png)
 
 * Soothing colors wer used to produce a calming feel when the user enters the website.
 
@@ -114,7 +114,7 @@ At the completion , I used the following websites to check my code for syntax er
 ### Accesibility
 
 * Lighthouse Devtool from Google Chrome was used for checking the performance of the website.
- ![lighthouse](https://github.com/jayadeepravuri/project-one/blob/98274db8b5a9b8b9eb87f11ad746e70c6eb30766/project%20one/assets/images/lighthouse-img.JPG)
+ ![lighthouse](https://github.com/jayadeepravuri/project2/blob/main/images/lighthouse.JPG)
 * Performance was low due high resolution images.
 * External libraries have lowered the performance
 
