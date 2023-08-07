@@ -5,16 +5,15 @@ Swedish Quiz is fun interative quiz game. Users will be able to see feedback rig
 Visit the deployed website [here](https://jayadeepravuri.github.io/project-one/)
 
 ## Mockup
-![Charlotte Mae mockup image](https://github.com/jayadeepravuri/project2/blob/main/images/mockup.JPG)
+![mockup image](https://github.com/jayadeepravuri/project2/blob/main/images/mockup.JPG)
 
-## User experience
 
 ### Color Reference
 
 
 ![Colours used](https://github.com/jayadeepravuri/project2/blob/a32d49a483f9d88e5860dcd08179890de8983bcf/images/sweden.png)
 
-* Soothing colors wer used to produce a calming feel when the user enters the website.
+* colors of the swedish flag were used .
 
 ### Users stories
 
@@ -29,6 +28,7 @@ Visit the deployed website [here](https://jayadeepravuri.github.io/project-one/)
 ### Typography
 
 * 'castoro' is the font used for the body of the site with serif used as a fallback.
+* 'castoro Titling' is the font used for the logo and header sections
 
 ### Imagery
 
