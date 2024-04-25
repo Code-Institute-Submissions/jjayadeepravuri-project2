@@ -9,8 +9,15 @@ const topBar = document.getElementById('top-game-section');
 let shuffledQuestions, currentQuestionIndex;
 const totalQuestions = 10;
 const counterDisplay = document.getElementById("questionCounter");
+const finalScoreElement = document.getElementById('final-score');
 
-startButton.addEventListener('click', startGame);
+startButton.addEventListener('click', () => {
+    if (startButton.innerText === 'Restart') {
+        resetGame();
+    } else {
+        startGame();
+    }
+});
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++;
     setNextquestion();
@@ -24,6 +31,7 @@ function startGame() {
     currentQuestionIndex = 0;
     questionCounter = 0;
     setNextquestion();
+    displayFinalScore.classList.add('hide');
 }
 
 
@@ -57,6 +65,30 @@ function resetState() {
     }
 }
 
+// Function to calculate the score
+function calculateScore() {
+    let score = 0;
+    shuffledQuestions.forEach(question => {
+        question.answers.forEach(answer => {
+            if (answer.selected && answer.correct) {
+                score++;
+            }
+        });
+    });
+    return score;
+}
+
+// Function to display final score
+function displayFinalScore() {
+    const finalScore = calculateScore();
+    // You can modify this to display the final score wherever you want in your HTML
+    finalScoreElement.innerText = `You have scored: ${finalScore} out of ${totalQuestions}`;
+    questionContainerElement.classList.add('hide');
+    finalScoreElement.classList.remove('hide');
+}
+
+
+
 
 function selectAnswer(e) {
     const selectedButton = e.target;
@@ -64,14 +96,22 @@ function selectAnswer(e) {
     setStatusClass(document.body, correct);
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct);
+
+        if (button === selectedButton) {
+            const questionIndex = currentQuestionIndex;
+            const answerIndex = Array.from(answerButtonsElement.children).indexOf(button);
+            shuffledQuestions[questionIndex].answers[answerIndex].selected = true;
+        }
+
     });
-    if (shuffledQuestions.length > currentQuestionIndex + 1) {
+
+        if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide');
-    } else {
+     } else {
         startButton.innerText = 'Restart';
         startButton.classList.remove('hide');
-        endGameText.classList.remove('hide');
-    }
+        displayFinalScore();
+     }
 }
 
 function setStatusClass(element, correct) {
@@ -87,6 +127,21 @@ function setStatusClass(element, correct) {
 function clearStatusClass(element) {
     element.classList.remove('correct');
     element.classList.remove('wrong');
+}
+
+// Function to reset the game
+function resetGame() {
+    // Reset any necessary variables or states
+    currentQuestionIndex = 0;
+    shuffledQuestions.forEach(question => {
+        question.answers.forEach(answer => {
+            answer.selected = false;
+        });
+    });
+    // Hide the final score display
+    document.getElementById('final-score').classList.add('hide');
+    // Restart the game
+    startGame();
 }
 
 const questions = [
@@ -190,55 +245,3 @@ const questions = [
     },
 
 ];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
