@@ -24,6 +24,8 @@ Visit the deployed website [here]( https://jayadeepravuri.github.io/project2/)
 * As a user, I want to see what was the correct answer if I have chosen an incorrect answer.
 * As a user, I want to know how many questions I have left to complete the quiz.
 * As a user, I want to be able to play the game again.
+* As a user, I want to know how much I scored
+
 
 ### Typography
 
@@ -32,11 +34,10 @@ Visit the deployed website [here]( https://jayadeepravuri.github.io/project2/)
 
 ### Imagery
 
-No Images were used 
+Swedish flag was used as favicon image
 
 ### Structure of the site
-When entering the site, users will be on the home page which is the Landing page. There is a 'Let's Play' button that users can click to enter the Get Set Go button, to get on the mood before playing the game. Once on the game page, users will be faced with the first question from the quiz. Every time they click on an answer, the next question will load. Once 10 questions have been answered, the restart button will appear to play the game again or they can go home by clicking on the logo, which will redirect them to the home page.
-
+When entering the site, users will be on the home page which is the Landing page. There is a 'Let's Play' button that users can click to enter the Get Set Go button, to get on the mood before playing the game. Once on the game page, users will be faced with the first question from the quiz. Every time they click on an answer, the next question will load. Once 10 questions have been answered, a final score will be displayed and the restart button will appear to play the game again or they can go home by clicking on the logo, which will redirect them to the home page.
 
 
 ## Features
@@ -46,10 +47,10 @@ When entering the site, users will be on the home page which is the Landing page
 * In the get in the mood page, there is a "get set go" button, which will give the user to breathe some air and get in the mood before playing the game.
 * In the game page, the user gets to play the game by testing his knowledge by answering 10 multiple-choice questions.
 * After the user selects the answer the user gets immediate feedback by the options displaying red(incorrect answers) and green(correct answers) and a next-button so he can move to the next question.
-* After the user finishes the 10 questions, a restart button will appear to play the game again, or can press the logo at anytime during the game ,so he can go to the homepage.
+* After the user finishes the 10 questions,a final score will be displayed and a restart button will appear to play the game again, or can press the logo at anytime during the game ,so he can go to the homepage.
 
 ## Future Features
-* Features like score can be added.
+* Features like timer can be added.
 
 ## Technologies Used
 
@@ -117,7 +118,7 @@ At the completion , I used the following websites to check my code for syntax er
 ### Accesibility
 
 * Lighthouse Devtool from Google Chrome was used for checking the performance of the website.
- ![lighthouse](https://github.com/jayadeepravuri/project2/blob/main/images/lighthouse.JPG)
+ ![lighthouse](https://github.com/jayadeepravuri/project2/blob/main/images/lighthouse.png)
 
  
 ### Unfixed bugs
