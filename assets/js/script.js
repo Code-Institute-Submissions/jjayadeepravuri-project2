@@ -1,150 +1,80 @@
-//
-const openPhase = document.getElementById('start-area')
 const startButton = document.getElementById('start-btn');
 const nextButton = document.getElementById('next-btn');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
+const questionCounterElement = document.getElementById('questionCounter');
 const questionContainerElement = document.getElementById('question-container');
-const topBar = document.getElementById('top-game-section');
-let shuffledQuestions, currentQuestionIndex;
-const totalQuestions = 10;
-const counterDisplay = document.getElementById("questionCounter");
 const finalScoreElement = document.getElementById('final-score');
+const topBar = document.getElementById('top-game-section');
 
-startButton.addEventListener('click', () => {
-    if (startButton.innerText === 'Restart') {
-        resetGame();
-    } else {
-        startGame();
-    }
-});
+let shuffledQuestions;
+let currentQuestionIndex = 0;
+let score = 0;
+
+startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++;
-    setNextquestion();
+    if (currentQuestionIndex < questions.length) {
+        displayQuestion();
+    } else {
+        showFinalScore();
+        questionContainerElement.classList.add('hide');
+    }
 });
 
+// Function to start the game
 function startGame() {
     startButton.classList.add('hide');
-    shuffledQuestions = questions.sort(() => Math.random() - .5);
     topBar.classList.remove('hide');
+    finalScoreElement.classList.add('hide');
+    shuffledQuestions = questions.sort(() => Math.random() - .5); 
     questionContainerElement.classList.remove('hide');
     currentQuestionIndex = 0;
-    questionCounter = 0;
-    setNextquestion();
-    displayFinalScore.classList.add('hide');
+    score = 0;
+    displayQuestion();
 }
 
-
-function setNextquestion() {
-    questionCounter++;
-    counterDisplay.innerText = `${questionCounter}/${totalQuestions}`;
+// Function to display the current question
+function displayQuestion() {
     resetState();
-    showQuestion(shuffledQuestions[currentQuestionIndex]);
-}
-
-function showQuestion(question) {
-    
-    questionElement.innerText = question.question;
-    question.answers.forEach(answer => {
+    const currentQuestion = questions[currentQuestionIndex];
+    questionCounterElement.innerText = `${currentQuestionIndex + 1}/${questions.length}`;
+    questionElement.innerText = currentQuestion.question;
+    currentQuestion.answers.forEach(answer => {
         const button = document.createElement('button');
         button.innerText = answer.text;
         button.classList.add('btn');
-        if (answer.correct) {
-            button.dataset.correct = answer.correct;
-        }
-        button.addEventListener('click', selectAnswer);
+        button.addEventListener('click', () => selectAnswer(answer.correct));
         answerButtonsElement.appendChild(button);
     });
 }
 
+// Function to reset the state of answer buttons
 function resetState() {
-    nextButton.classList.add('hide');
     while (answerButtonsElement.firstChild) {
-        answerButtonsElement.removeChild
-            (answerButtonsElement.firstChild);
+        answerButtonsElement.removeChild(answerButtonsElement.firstChild);
     }
+    nextButton.classList.add('hide');
 }
 
-// Function to calculate the score
-function calculateScore() {
-    let score = 0;
-    shuffledQuestions.forEach(question => {
-        question.answers.forEach(answer => {
-            if (answer.selected && answer.correct) {
-                score++;
-            }
-        });
-    });
-    return score;
-}
-
-// Function to display final score
-function displayFinalScore() {
-    const finalScore = calculateScore();
-    // You can modify this to display the final score wherever you want in your HTML
-    finalScoreElement.innerText = `You have scored: ${finalScore} out of ${totalQuestions}`;
-    questionContainerElement.classList.add('hide');
-    finalScoreElement.classList.remove('hide');
-}
-
-
-
-
-function selectAnswer(e) {
-    const selectedButton = e.target;
-    const correct = selectedButton.dataset.correct;
-    setStatusClass(document.body, correct);
-    Array.from(answerButtonsElement.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct);
-
-        if (button === selectedButton) {
-            const questionIndex = currentQuestionIndex;
-            const answerIndex = Array.from(answerButtonsElement.children).indexOf(button);
-            shuffledQuestions[questionIndex].answers[answerIndex].selected = true;
-        }
-
-    });
-
-        if (shuffledQuestions.length > currentQuestionIndex + 1) {
-        nextButton.classList.remove('hide');
-     } else {
-        startButton.innerText = 'Restart';
-        startButton.classList.remove('hide');
-        displayFinalScore();
-     }
-}
-
-function setStatusClass(element, correct) {
-    clearStatusClass(element);
+// Function to handle the selection of an answer
+function selectAnswer(correct) {
     if (correct) {
-        element.classList.add('correct');
-    } else {
-        element.classList.add('wrong');
-
+        score++;
     }
+    nextButton.classList.remove('hide');
 }
 
-function clearStatusClass(element) {
-    element.classList.remove('correct');
-    element.classList.remove('wrong');
+// Function to show the final score
+function showFinalScore() {
+    finalScoreElement.innerText = `Your Final Score: ${score}/${questions.length}`;
+    finalScoreElement.classList.remove('hide');
+    startButton.innerText = 'Restart';
+    startButton.classList.remove('hide');
+    nextButton.classList.add('hide');
 }
 
-// Function to reset the game
-function resetGame() {
-    // Reset any necessary variables or states
-    currentQuestionIndex = 0;
-    shuffledQuestions.forEach(question => {
-        question.answers.forEach(answer => {
-            answer.selected = false;
-        });
-    });
-    // Hide the final score display
-    document.getElementById('final-score').classList.add('hide');
-    // Restart the game
-    startGame();
-}
-
-const questions = [
+questions = [
     {
         question: 'Swedish megastars ABBA won the 1974 Eurovision Song Contest with which song?',
         answers: [
